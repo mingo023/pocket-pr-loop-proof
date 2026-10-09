@@ -1,0 +1,13 @@
+name: ci
+on: pull_request
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: test -f hooks/use-restore-preview.ts
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: grep -q 'restored' hooks/use-restore-preview.ts || { echo "expected the hook to wait for the restore"; exit 1; }
