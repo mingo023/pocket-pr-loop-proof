@@ -1,6 +1,6 @@
 export const base0 = 0;
-export const base1 = 1;
-export const base2 = 2;
+export const next1 = 1;
+export const next2 = 2;
 export const base3 = 3;
 export const base4 = 4;
 export const base5 = 5;
